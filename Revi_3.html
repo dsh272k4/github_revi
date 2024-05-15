@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duong_dsh</title>
+    <style>
+        :root {
+            --mauchinh: #53E3DC;
+            /* cach dung var(--mauchinh) */
+            --mauphu:#E6FAF9;
+            --mauphu2:#ff7739;
+            --mauphu3:#4C5B29;
+        }
+        .toan-trang{
+            width: 1440px;
+            height: 3000px;
+            background-color: var(--mauphu);
+        }
+        .TT{
+            margin-left: 165px;
+        }
+        .phan-dau{
+            width: 1110px;
+            margin: 0 auto; 
+            height: 175px;
+            background-color: var(--mauchinh);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .pd_phantu{
+            width: 150px;
+            height: 40px;
+            list-style: none;
+            font-size: 30px;
+            display: inline-block;
+            text-align: center;
+            margin:0 40px 0 20px;
+        }
+        .pd_chu{
+            color: #000000;
+            text-decoration: none;
+        }
+        .logo img{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            top: 12px; 
+            right: 460px;
+            position: absolute;
+        }
+        .menu_phu{
+            display: none;
+            position: absolute;
+            width: 200px;
+            height: 150px;
+            background-color: #ffffff;
+        }
+        .menup_con{
+            list-style: none;
+            display: inline-block;
+        }
+        .pd_phantu:hover .menu_phu {
+            display: block;
+        }
+        .pd_chu:hover{
+            text-decoration:underline;
+            color: #ff7739;
+        }
+
+        /* .phan_duoi */
+        .phan_duoi{
+            margin-left: 165px;
+            margin-top: 65px;
+            border-top: 1px solid var(--mauchinh);
+            box-sizing: border-box;
+            width: 1110px;
+            height: 300px;
+            background-color: var(--mauphu);
+            position: relative;
+        }
+        .pd_phanduoi{
+            position: absolute;
+            top: 150px;
+            background-color: var(--mauchinh);
+            width: 1110px;
+            height: 150px;
+        }
+        .pd_phanduoi_chu{
+            margin-left: 40px;
+            font-size: 25px;
+            list-style: none;
+        }
+        
+        .pd_img{
+            right: 30px;
+            height: 30px;
+        }
+        .pd_phantren_chu{
+            margin-right: 30px ;
+        }
+        .pd_phantren{
+            padding-left: 40px;
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
+        .pd_form{
+            display: flex;
+        }
+        .pd_form_chu{
+            width: 90px;
+            height: 90px;
+            box-sizing: content-box;
+            font-size: 23px;
+            text-align: center;
+        }
+        .pd_form_dk{
+            margin-top: 23px;
+            width: 290px;
+            height: 90px;
+        }
+        #pd_form_nhap,.pd_form_gui{
+            width: 280px;
+            height: 40px;
+            border: none;
+            border-radius: 5px;
+            padding-left: 10px;
+            
+        }
+        .pd_form_gui{
+            margin-top: 10px;
+            border-radius: 20px;
+            background-color: #188EFB;
+            color: #fff;
+            text-align: left;
+            cursor: pointer;
+            
+        }
+        #pd_form_gui:hover{
+            background-color: #188dfba7;
+        }
+        
+
+        /* phan than */
+    .pt_tieude{
+        width: 600px;
+        height: 70px;
+        text-align: center;
+        font-size: 29px;
+        border-bottom: #000 solid 5px;
+        margin: 100px 250px 50px;
+    }
+    .pt_list_menu{
+        width: 1110px;
+        height: 60px;
+        display: flex;
+        border-bottom: var(--mauchinh) 1px solid;
+        box-sizing: border-box;
+    }
+    .pt_list_menu_con{
+        cursor: pointer;
+        width: 200px;
+        height: 60px;
+        font-size: 30px;
+    }
+    .pt_list_menu_anh{
+        width: 36px;
+        height: 36px;
+        margin-top: 10px;
+    }
+    .pt_list_menu_con:hover{
+        color: var(--mauchinh);
+    }
+    .pt_list_all:hover{
+        color: red;
+    }
+    .pt_khunglist{
+        width: 1110px;
+        height: 1110px;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 80px;
+    }
+    .pt_khung_con{
+        width: 350px;
+        height: 350px;
+        background-color: #fff;
+        margin: 5px;
+        border-radius: 25px;
+        position: relative;
+    }
+    .pt_khung_con_anh{
+        width: 175px;
+        height: 175px;
+        margin-left: 88px;
+        position: relative;
+        object-fit: cover;
+    }
+    .pt_khung_con_chu{
+        width: 350px;
+        height: 36px;
+        font-size: 30px;
+        text-align: center;
+    }
+    .pt_khung_con_gia{
+        width: 175px;
+        height: 37px;
+        margin-left: 88px;
+        color: red;
+        border: 1px red solid;
+        text-align: center;
+        font-size: 30px;
+        box-sizing: border-box;
+        border-radius: 5px;
+        
+    }
+    .pt_khung_con_giohang{
+        cursor: pointer;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border-radius: 10px 0 25px 0 ;
+        width: 50px;
+        height: 50px;
+        font-size: 40px;
+        background-color: #000;
+        text-align: center;
+    }
+        
+    </style>
+</head>
+<body>
+    <div class="toan-trang">
+        <div class="TT phan-dau">
+            <ul class="phan_khung">
+                <li class="pd_phantu"><a class="pd_chu" href="">Thực đơn</a>
+                    <ul class="menu_phu">
+                        <li class="menup_con"><a class="pd_chu" href="">ca phe</a></li>
+                        <li class="menup_con"><a class="pd_chu" href="">tra</a></li>
+                        <li class="menup_con"><a class="pd_chu" href="">banh</a></li>
+                    </ul>
+                </li>
+                <li class="pd_phantu"><a class="pd_chu" href="Revi_2.html">Bản Tin</a></li>
+                <li class="pd_phantu pd_chu"></li>
+                <li class="pd_phantu"><a class="pd_chu" href="">Liên Hệ</a></li>
+                <li class="pd_phantu"><a class="pd_chu" href="">Đơn Hàng</a></li>
+                <a class="logo" href="Revi_1.html"><img src="./img-revi/logo.jpg" alt=""></a>
+            </ul>
+        </div>
+
+        <div class="TT phan-than">
+            <div class="pt_tieude"> 
+                <h1>Thực đơn của chúng tôi</h1>
+            </div>
+            <div class="pt_list_menu">
+                <div class="pt_list_menu_con pt_list_all" onclick="plusSlides(1)" ><img class="pt_list_menu_anh" src="./img-revi/all.png" alt="">ALL</div>
+                <div class="pt_list_menu_con" onclick="plusSlides(2)" ><img class="pt_list_menu_anh" src="./img-revi/bánh ngọt.png" alt="">Cà Phê</div>
+                <div class="pt_list_menu_con" onclick="plusSlides(3)" ><img class="pt_list_menu_anh" src="./img-revi/trà chanh.png" alt="">Trà chanh</div>
+                <div class="pt_list_menu_con" onclick="plusSlides(4)" ><img class="pt_list_menu_anh" src="./img-revi/bánh ngọt.png" alt="">Bánh ngọt</div>
+            </div>
+            <div class="pt_khunglist">
+                <div class="pt_khung_con">
+                    <img class="pt_khung_con_anh" src="./img-revi/cà phê.jpg" alt="">
+                    <p class="pt_khung_con_chu">capuchino</p>
+                    <p class="pt_khung_con_gia">35.000</p>
+                    <div class="pt_khung_con_giohang">
+                        <img src="./img-revi/giỏ hàng.png" alt="">
+                    </div>
+                </div>
+                <div class="pt_khung_con">
+                    <img class="pt_khung_con_anh" src="./img-revi/ca phe 2.jpg" alt="">
+                    <p class="pt_khung_con_chu">capuchino</p>
+                    <p class="pt_khung_con_gia">35.000</p>
+                    <div class="pt_khung_con_giohang">
+                        <img src="./img-revi/giỏ hàng.png" alt="">
+                    </div>
+                </div>
+                <div class="pt_khung_con">
+                    <img class="pt_khung_con_anh" src="./img-revi/cà phê.jpg" alt="">
+                    <p class="pt_khung_con_chu">Americano</p>
+                    <p class="pt_khung_con_gia">35.000</p>
+                    <div class="pt_khung_con_giohang">
+                        <img src="./img-revi/giỏ hàng.png" alt="">
+                    </div>
+                </div>
+                <div class="pt_khung_con">
+                    <img class="pt_khung_con_anh" src="./img-revi/cà phê 4.jpg" alt="">
+                    <p class="pt_khung_con_chu">nâu sepical</p>
+                    <p class="pt_khung_con_gia">35.000</p>
+                    <div class="pt_khung_con_giohang">
+                        <img src="./img-revi/giỏ hàng.png" alt="">
+                    </div>
+                </div>
+                <div class="pt_khung_con">
+                    <img class="pt_khung_con_anh" src="./img-revi/cà phê 5.jpg" alt="">
+                    <p class="pt_khung_con_chu">cà phê dừa</p>
+                    <p class="pt_khung_con_gia">45.000</p>
+                    <div class="pt_khung_con_giohang">
+                        <img src="./img-revi/giỏ hàng.png" alt="">
+                    </div>
+                </div>
+                <div class="pt_khung_con">
+                    <img class="pt_khung_con_anh" src="./img-revi/cà phê 6.jpg" alt="">
+                    <p class="pt_khung_con_chu">Latte đá</p>
+                    <p class="pt_khung_con_gia">35.000</p>
+                    <div class="pt_khung_con_giohang">
+                        <img src="./img-revi/giỏ hàng.png" alt="">
+                    </div>
+                </div>
+                <div class="pt_khung_con">
+                    <img class="pt_khung_con_anh" src="./img-revi/cà phê 7.jpg" alt="">
+                    <p class="pt_khung_con_chu">Latte nóng</p>
+                    <p class="pt_khung_con_gia">35.000</p>
+                    <div class="pt_khung_con_giohang">
+                        <img src="./img-revi/giỏ hàng.png" alt="">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+
+        <div class="TT phan_duoi">
+            <div class="pd_phantren">
+                
+                    <ul class="pd_phantren_ul">
+                        <h1>THÔNG TIN LIÊN HỆ</h1>
+                        <a class="pd_phantren_chu" href="https://www.facebook.com/profile.php?id=100068114271008"><img class="pd_img" src="./img-revi/ic_baseline-facebook.png" alt="facebook"></a>
+                        <a class="pd_phantren_chu" href="https://www.instagram.com/duong_dsh/"><img class="pd_img" src="./img-revi/mdi_instagram.png" alt="instagram"></a>
+                        <a class="pd_phantren_chu" href=""><img class="pd_img" src="./img-revi/mdi_youtube.png" alt="youtube"></a>
+                    </ul>
+                    <div class="pd_form" >
+                        <p class="pd_form_chu">Đăng ký nhận thông báo</p>
+                        <form class="pd_form_dk" action="">
+                            <label for="pd_form_nhap"></label>
+                            <input id="pd_form_nhap" type="email" placeholder="Nhập email của bạn">
+                            <button title="Submit" onclick="kiemtra()" class="pd_form_gui">Đăng  ký nhận tin tức</button>
+                        </form>
+                    </div>
+                
+            </div>
+            <div class="pd_phanduoi">
+                <ul class="pd_phanduoi_ul">
+                    <li class="pd_phanduoi_chu">Révi caffe & teacom.</li>
+                    <li class="pd_phanduoi_chu">Địa chỉ : Tầng B1, tòa Capital Palace, 29 Liễu Giai, Ba Đình, Hà Nội.</li>
+                    <li class="pd_phanduoi_chu">Liên hệ: dsh272004@gmail.com & tuyen19070004@gmail.com.</li>
+                </ul>
+            </div>
+        </div>
+
+        <script>
+            function kiemtra() {
+                var email = document.getElementById('pd_form_nhap').value; 
+                var emailPattern = /^\S+@\S+\.\S+$/;
+                if (!emailPattern.test(email)) {
+                    alert('Email không hợp lệ. Vui lòng nhập lại.');
+                    return;
+                }
+                var thongTin = 'Cảm ơn bạn!\nChúng tôi sẽ gửi thông báo mới nhất đến ' + email;
+                alert(thongTin);
+            }
+        </script>
+        <script>
+            let muc = 1; 
+            showSlides(muc);
+
+            function plusSlides(n) { // Hàm chuyển slide
+              showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) { // Hàm hiển thị slide hiện tại
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) { // Hàm hiển thị slide
+              let i;
+              let slides = document.getElementsByClassName("anh_qc"); // Lấy tất cả các slide
+              if (n > slides.length) {slideIndex = 1}    // Nếu slide vượt quá số lượng slide, quay lại slide đầu tiên
+              if (n < 1) {slideIndex = slides.length} // Nếu slide ít hơn slide đầu tiên, quay lại slide cuối cùng
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  // Ẩn tất cả các slide
+              }
+              slides[slideIndex-1].style.display = "block";  // Hiển thị slide hiện tại
+            }
+
+        </script>
+    </div>
+</body>
+</html>

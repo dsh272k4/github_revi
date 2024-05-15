@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duong_dsh</title>
+    <style>
+        :root {
+            --mauchinh: #53E3DC;
+            /* cach dung var(--mauchinh) */
+            --mauphu:#E6FAF9;
+            --mauphu2:#ff7739;
+            --mauphu3:#4C5B29;
+        }
+        .toan-trang{
+            width: 1440px;
+            height: 3000px;
+            background-color: var(--mauphu);
+        }
+        .TT{
+            margin-left: 165px;
+        }
+        .phan-dau{
+            width: 1110px;
+            margin: 0 auto; 
+            height: 175px;
+            background-color: var(--mauchinh);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .pd_phantu{
+            width: 150px;
+            height: 40px;
+            list-style: none;
+            font-size: 30px;
+            display: inline-block;
+            text-align: center;
+            margin:0 40px 0 20px;
+        }
+        .pd_chu{
+            color: #000000;
+            text-decoration: none;
+        }
+        .logo img{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            top: 12px; 
+            right: 460px;
+            position: absolute;
+        }
+        .menu_phu{
+            display: none;
+            position: absolute;
+            width: 200px;
+            height: 150px;
+            background-color: #ffffff;
+        }
+        .menup_con{
+            list-style: none;
+            display: inline-block;
+        }
+        .pd_phantu:hover .menu_phu {
+            display: block;
+        }
+        .pd_chu:hover{
+            text-decoration:underline;
+            color: #ff7739;
+        }
+
+        /* .phan_duoi */
+        .phan_duoi{
+            margin-left: 165px;
+            margin-top: 65px;
+            border-top: 1px solid var(--mauchinh);
+            box-sizing: border-box;
+            width: 1110px;
+            height: 300px;
+            background-color: var(--mauphu);
+            position: relative;
+        }
+        .pd_phanduoi{
+            position: absolute;
+            top: 150px;
+            background-color: var(--mauchinh);
+            width: 1110px;
+            height: 150px;
+        }
+        .pd_phanduoi_chu{
+            margin-left: 40px;
+            font-size: 25px;
+            list-style: none;
+        }
+        
+        .pd_img{
+            right: 30px;
+            height: 30px;
+        }
+        .pd_phantren_chu{
+            margin-right: 30px ;
+        }
+        .pd_phantren{
+            padding-left: 40px;
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
+        .pd_form{
+            display: flex;
+        }
+        .pd_form_chu{
+            width: 90px;
+            height: 90px;
+            box-sizing: content-box;
+            font-size: 23px;
+            text-align: center;
+        }
+        .pd_form_dk{
+            margin-top: 23px;
+            width: 290px;
+            height: 90px;
+        }
+        #pd_form_nhap,.pd_form_gui{
+            width: 280px;
+            height: 40px;
+            border: none;
+            border-radius: 5px;
+            padding-left: 10px;
+            
+        }
+        .pd_form_gui{
+            margin-top: 10px;
+            border-radius: 20px;
+            background-color: #188EFB;
+            color: #fff;
+            text-align: left;
+            cursor: pointer;
+            
+        }
+        #pd_form_gui:hover{
+            background-color: #188dfba7;
+        }
+        
+
+        /* phan than */
+        .pt_khung{
+            width: 1110px;
+            height: 700px;
+            margin-top: 100px;
+            border-top: var(--mauchinh) solid 1px;
+            box-sizing: border-box;
+            display: flex;
+            
+        }
+        .pt_khung_anh{
+            width: 675px;
+            height: 700px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .pt_anh{
+            margin-top: 100px;
+            width: 215px;
+            height: 450px;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+        .pt_anh_2{
+            margin-top: 150px;
+        }
+        .pt_khung_giothieu{
+            width: 435px;
+            height: 700px;
+            padding: 100px 40px 0;
+            box-sizing: border-box;
+        }
+        .pt_khung_tieude{
+           width: 100%;
+           height: 100px;
+           font-size: 45px;
+           box-sizing: border-box;
+        }
+        .pt_khung_noidung{
+            width: 100%;
+            height: 200px;
+            font-size: 18px;
+            
+        }
+        .pt_khung_button{
+            width: 120px;
+            height: 40px;
+            background-color: #fff;
+            border: #18A0FB 1px solid;
+            border-radius: 5px;
+            display: flex;
+            align-items: center; 
+            justify-content: center;
+        }
+        .pt_khung_button_chu{
+            text-decoration: none;
+            color: #18A0FB;
+            font-size: 18px;
+        }
+        .pt_khung_button:hover{
+            background-color: var(--mauchinh);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="toan-trang">
+        <div class="TT phan-dau">
+            <ul class="phan_khung">
+                <li class="pd_phantu"><a class="pd_chu" href="Revi_3.html">Thực đơn</a>
+                    <ul class="menu_phu">
+                        <li class="menup_con"><a class="pd_chu" href="">ca phe</a></li>
+                        <li class="menup_con"><a class="pd_chu" href="">tra</a></li>
+                        <li class="menup_con"><a class="pd_chu" href="">banh</a></li>
+                    </ul>
+                </li>
+                <li class="pd_phantu"><a class="pd_chu" href="Revi_2.html">Bản Tin</a></li>
+                <li class="pd_phantu pd_chu"></li>
+                <li class="pd_phantu"><a class="pd_chu" href="">Liên Hệ</a></li>
+                <li class="pd_phantu"><a class="pd_chu" href="">Đơn Hàng</a></li>
+                <a class="logo" href="Revi_1.html"><img src="./img-revi/logo.jpg" alt=""></a>
+            </ul>
+        </div>
+
+
+        <div class="TT phan-than">
+            <div class="pt_khung">
+                <div class="pt_khung_anh">
+                    <img class="pt_anh" src="./img-revi/ca phe 1.jpg" alt="">
+                    <img class="pt_anh pt_anh_2 " src="./img-revi/ca phe 2.jpg" alt="">
+                    <img class="pt_anh" src="./img-revi/ca phe 3.jpg" alt="">
+                </div>
+                <div class="pt_khung_giothieu">
+                    <h1 class="pt_khung_tieude">Giới thiệu đôi nét về caffe</h1>
+                    <p class="pt_khung_noidung">Một ngày làm việc lại bắt đầu. Révi cũng bắt đầu guồng quay ngày mới để mang đến năng lượng tỉnh táo và sự sáng tạo, đột phá tới các bạn.Đừng quên, Révi phục vụ bạn suốt ngày dài công sở. Ghé Révi bất cứ lúc nào bạn muốn, hoặc liên hệ chúng mình để order nhé.<br> Chúc bạn yêu ngày mới nhiều niềm vui!</p>
+                    <div class="pt_khung_button">
+                        <a class="pt_khung_button_chu" href="">Tìm hiểu thêm</a>
+                    </div>
+                </div>
+            </div>
+            <div class="pt_khung">
+                <div class="pt_khung_anh">
+                    <img class="pt_anh" src="./img-revi/trà 1.jpg" alt="">
+                    <img class="pt_anh pt_anh_2 " src="./img-revi/trà 2.jpg" alt="">
+                    <img class="pt_anh" src="./img-revi/trà 3.jpg" alt="">
+                </div>
+                <div class="pt_khung_giothieu">
+                    <h1 class="pt_khung_tieude">Giới thiệu đôi nét về caffe</h1>
+                    <p class="pt_khung_noidung">Một ngày làm việc lại bắt đầu. Révi cũng bắt đầu guồng quay ngày mới để mang đến năng lượng tỉnh táo và sự sáng tạo, đột phá tới các bạn.Đừng quên, Révi phục vụ bạn suốt ngày dài công sở. Ghé Révi bất cứ lúc nào bạn muốn, hoặc liên hệ chúng mình để order nhé.<br> Chúc bạn yêu ngày mới nhiều niềm vui!</p>
+                    <div class="pt_khung_button">
+                        <a class="pt_khung_button_chu" href="">Tìm hiểu thêm</a>
+                    </div>
+                </div>
+            </div>
+            <div class="pt_khung">
+                <div class="pt_khung_anh">
+                    <img class="pt_anh" src="./img-revi/bánh 1.jpg" alt="">
+                    <img class="pt_anh pt_anh_2 " src="./img-revi/bánh 2.jpg" alt="">
+                    <img class="pt_anh" src="./img-revi/bánh 3.jpg" alt="">
+                </div>
+                <div class="pt_khung_giothieu">
+                    <h1 class="pt_khung_tieude">Giới thiệu đôi nét về caffe</h1>
+                    <p class="pt_khung_noidung">Một ngày làm việc lại bắt đầu. Révi cũng bắt đầu guồng quay ngày mới để mang đến năng lượng tỉnh táo và sự sáng tạo, đột phá tới các bạn.Đừng quên, Révi phục vụ bạn suốt ngày dài công sở. Ghé Révi bất cứ lúc nào bạn muốn, hoặc liên hệ chúng mình để order nhé.<br> Chúc bạn yêu ngày mới nhiều niềm vui!</p>
+                    <div class="pt_khung_button">
+                        <a class="pt_khung_button_chu" href="">Tìm hiểu thêm</a>
+                    </div>
+                </div>
+            </div>    
+        </div>
+
+
+        <div class="TT phan_duoi">
+            <div class="pd_phantren">
+                
+                    <ul class="pd_phantren_ul">
+                        <h1>THÔNG TIN LIÊN HỆ</h1>
+                        <a class="pd_phantren_chu" href="https://www.facebook.com/profile.php?id=100068114271008"><img class="pd_img" src="./img-revi/ic_baseline-facebook.png" alt="facebook"></a>
+                        <a class="pd_phantren_chu" href="https://www.instagram.com/duong_dsh/"><img class="pd_img" src="./img-revi/mdi_instagram.png" alt="instagram"></a>
+                        <a class="pd_phantren_chu" href=""><img class="pd_img" src="./img-revi/mdi_youtube.png" alt="youtube"></a>
+                    </ul>
+                    <div class="pd_form" >
+                        <p class="pd_form_chu">Đăng ký nhận thông báo</p>
+                        <form class="pd_form_dk" action="">
+                            <label for="pd_form_nhap"></label>
+                            <input id="pd_form_nhap" type="email" placeholder="Nhập email của bạn">
+                            <button title="Submit" onclick="kiemtra()" class="pd_form_gui">Đăng  ký nhận tin tức</button>
+                        </form>
+                    </div>
+                
+            </div>
+            <div class="pd_phanduoi">
+                <ul class="pd_phanduoi_ul">
+                    <li class="pd_phanduoi_chu">Révi caffe & teacom.</li>
+                    <li class="pd_phanduoi_chu">Địa chỉ : Tầng B1, tòa Capital Palace, 29 Liễu Giai, Ba Đình, Hà Nội.</li>
+                    <li class="pd_phanduoi_chu">Liên hệ: dsh272004@gmail.com & tuyen19070004@gmail.com.</li>
+                </ul>
+            </div>
+        </div>
+
+        <script>
+            function kiemtra() {
+                var email = document.getElementById('pd_form_nhap').value; 
+                var emailPattern = /^\S+@\S+\.\S+$/;
+                if (!emailPattern.test(email)) {
+                    alert('Email không hợp lệ. Vui lòng nhập lại.');
+                    return;
+                }
+                var thongTin = 'Cảm ơn bạn!\nChúng tôi sẽ gửi thông báo mới nhất đến ' + email;
+                alert(thongTin);
+            }
+        </script>
+    </div>
+</body>
+</html>
