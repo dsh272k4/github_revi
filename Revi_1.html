@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duong_dsh</title>
+    <style>
+        :root {
+            --mauchinh: #53E3DC;
+            /* cach dung var(--mauchinh) */
+            --mauphu:#E6FAF9;
+            --mauphu2:#ff7739;
+            --mauphu3:#4C5B29;
+        }
+        .toan-trang{
+            width: 1440px;
+            height: 3000px;
+            background-color: var(--mauphu);
+        }
+        .TT{
+            margin-left: 165px;
+        }
+        .phan-dau{
+            width: 1110px;
+            margin: 0 auto; 
+            height: 175px;
+            background-color: var(--mauchinh);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .pd_phantu{
+            width: 150px;
+            height: 40px;
+            list-style: none;
+            font-size: 30px;
+            display: inline-block;
+            text-align: center;
+            margin:0 40px 0 20px;
+        }
+        .pd_chu{
+            color: #000000;
+            text-decoration: none;
+        }
+        .logo img{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            top: 12px; 
+            right: 460px;
+            position: absolute;
+        }
+        .menu_phu{
+            display: none;
+            position: absolute;
+            width: 200px;
+            height: 150px;
+            background-color: #ffffff;
+        }
+        .menup_con{
+            list-style: none;
+            display: inline-block;
+        }
+        .pd_phantu:hover .menu_phu {
+            display: block;
+        }
+        .pd_chu:hover{
+            text-decoration:underline;
+            color: #ff7739;
+        }
+        /* phan than */
+        .quang_cao img{
+            width: 1110px;
+            height: 500px;
+            position: relative;
+        }
+
+        .prev img{
+            cursor: pointer; /* Con trỏ chuột thành kiểu tay */
+            position: absolute; /* Đặt vị trí tuyệt đối */
+            width: 60px;
+            height: 60px;
+            padding: 20px; /* Khoảng cách đệm */
+            user-select: none; /* Không cho phép chọn */
+            top: 632px;
+            left: 1025px;
+        }
+        .next img{
+            cursor: pointer; /* Con trỏ chuột thành kiểu tay */
+            position: absolute; /* Đặt vị trí tuyệt đối */
+            width: 60px;
+            height: 60px;
+            padding: 20px; 
+            user-select: none; /* Không cho phép chọn */
+            top: 632px;
+            left: 1100px;
+        }
+        
+        .anh_than img{ 
+            margin-top: 100px;
+            width: 1110px;
+            height: 1300px;
+        }
+        .anh_than{
+            position: relative;
+        }
+        .pt_cauchuyen{
+            position: absolute;
+            width: 550px;
+            height: 200px;
+            background: #fff1d0c4 ;
+            border-radius: 40px;
+            top: 620px;
+            left: 23%;
+            display: flex; /* Sử dụng flexbox để căn chữ ra giữa */
+            justify-content: center; /* Căn chữ ra giữa theo chiều ngang */
+            align-items: center;/* Căn chữ ra giữa theo chiều dọc */
+        }
+        .pt_chu{
+            color: var(--mauchinh);
+            text-decoration: none;
+            font-size: 50px;
+        }
+        .pt_chu:hover{
+            text-decoration:underline;
+            color: #ff7739;
+        }
+
+        .pt_cuoi{
+            margin-top: 50px;
+            width: 1110px;
+            height: 500px;
+            background-color: #ff7739;
+            position: relative;
+        }
+        .pt_trai{
+            position: absolute;
+            width: 555px;
+            height: 500px;
+            background: url(./img-revi/quán.jpg);
+        }
+        .pt_phai{
+            position: absolute;
+            left: 555px;
+            width: 555px;
+            height: 500px;
+            background-color: #FDE8A5;
+        }
+        .pc_quanmoi{
+            display: flex;
+            justify-content: center; /* Căn chữ ra giữa theo chiều ngang */
+            color: #ffffff;
+            font-size: 50px;
+        }
+        .pc_diachi{
+            margin-left: 280px;
+            width: 200px;
+            height: 200px;
+            background-color: #fde8a5a7;
+            font-size: 20px;
+        }
+        .pc_diachi_chu{
+            list-style: none;
+        }
+        .dot{
+            cursor: pointer; /* Con trỏ chuột thành kiểu tay */
+            height: 15px; /* Chiều cao */
+            width: 15px; /* Chiều rộng */
+            margin: 0 10px;
+            background-color: var(--mauchinh);
+            border: 1px solid #000000;
+            border-radius: 50%;
+            display: inline-block; /* Hiển thị là khối inline */
+            transition:  0.6s ease; /* Hiệu ứng chuyển đổi */
+        }
+        .active, .dot:hover {
+            background-color: #000000;
+        }
+        .pc_next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            margin-top: -10px;
+            color: rgb(0, 0, 0);
+            font-size: 20px;
+            user-select: none;
+        }
+        .pc_next{
+            margin-right: -170px;
+        }
+        .pc_nen{
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--mauchinh);
+            top:425px;
+            left: 180px; 
+            width: 220px;
+            height: 35px;
+        }
+        .tinmoinhat{
+            font-size: 40px;
+            color: var(--mauphu3);
+        }
+
+        .pc_tren{
+            margin-top: 35px;
+            margin-left: 60px;
+            width: 425px;
+            height: 45px;
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
+        .xemchitiet{
+            list-style: none;
+        }
+        .xemchitieta{
+            font-size: 20px;
+            color: var(--mauphu3);
+        }
+        .xemchitieta:hover{
+            color: var(--mauchinh);
+        }
+
+        .pc_nv{
+            max-width: 400;
+            max-height: 130px;
+            margin-top: 20px;
+            margin-left: 60px; 
+
+        }
+        .pc_nv_anh {
+            width: 130px;
+            height: 130px;
+            display: inline-block;
+            vertical-align: middle; /* Căn giữa theo chiều dọc */
+        }
+        .pc_nv_chu{
+            list-style: none;
+            color: var(--mauphu3);
+            font-size: 40px;
+            width: calc(100% - 150px);
+            height: 130px;
+            display: inline-block;
+            vertical-align: middle; /* Căn giữa theo chiều dọc */
+        }
+        .pc_noidung {
+            overflow-y: auto; /* Cho phép cuộn ngang nếu nội dung vượt quá kích thước của .pc_noidung */
+            max-height: 350px; 
+        }
+        /* Định dạng thanh cuộn */
+        .pc_noidung::-webkit-scrollbar {
+            width: 10px; 
+        }
+
+        /* Định dạng nút cuộn */
+        .pc_noidung::-webkit-scrollbar-thumb {
+            background-color: rgba(0, 0, 0, 0.3); 
+            border-radius: 5px; 
+        }
+
+        /* Định dạng khi rê chuột vào thanh cuộn */
+        .pc_noidung::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(0, 0, 0, 0.5); /* Màu nền khi rê chuột vào */
+        }
+
+        /* Định dạng phần đường thanh cuộn */
+        .pc_noidung::-webkit-scrollbar-track {
+            background-color: rgba(0, 0, 0, 0.1); 
+            border-radius: 5px; 
+        }
+        .phan_duoi{
+            margin-left: 0;
+            margin-top: 65px;
+            border-top: 1px solid var(--mauchinh);
+            box-sizing: border-box;
+            width: 1110px;
+            height: 300px;
+            background-color: var(--mauphu);
+            position: relative;
+        }
+        .pd_phanduoi{
+            position: absolute;
+            top: 150px;
+            background-color: var(--mauchinh);
+            width: 1110px;
+            height: 150px;
+        }
+        .pd_phanduoi_chu{
+            margin-left: 40px;
+            font-size: 25px;
+            list-style: none;
+        }
+        
+        .pd_img{
+            right: 30px;
+            height: 30px;
+        }
+        .pd_phantren_chu{
+            margin-right: 30px ;
+        }
+        .pd_phantren{
+            padding-left: 40px;
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
+        .pd_form{
+            display: flex;
+        }
+        .pd_form_chu{
+            width: 90px;
+            height: 90px;
+            box-sizing: content-box;
+            font-size: 23px;
+            text-align: center;
+        }
+        .pd_form_dk{
+            margin-top: 23px;
+            width: 290px;
+            height: 90px;
+        }
+        #pd_form_nhap,.pd_form_gui{
+            width: 280px;
+            height: 40px;
+            border: none;
+            border-radius: 5px;
+            padding-left: 10px;
+            
+        }
+        .pd_form_gui{
+            margin-top: 10px;
+            border-radius: 20px;
+            background-color: #188EFB;
+            color: #fff;
+            text-align: left;
+            cursor: pointer;
+            
+        }
+        #pd_form_gui:hover{
+            background-color: #188dfba7;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="toan-trang">
+        <div class="TT phan-dau">
+            <ul class="phan_khung">
+                <li class="pd_phantu"><a class="pd_chu" href="Revi_3.html">Thực đơn</a>
+                    <ul class="menu_phu">
+                        <li class="menup_con"><a class="pd_chu" href="">ca phe</a></li>
+                        <li class="menup_con"><a class="pd_chu" href="">tra</a></li>
+                        <li class="menup_con"><a class="pd_chu" href="">banh</a></li>
+                    </ul>
+                </li>
+                <li class="pd_phantu"><a class="pd_chu" href="Revi_2.html">Bản Tin</a></li>
+                <li class="pd_phantu pd_chu"></li>
+                <li class="pd_phantu"><a class="pd_chu" href="">Liên Hệ</a></li>
+                <li class="pd_phantu"><a class="pd_chu" href="">Đơn Hàng</a></li>
+                <a class="logo" href="Revi_1.html"><img src="./img-revi/logo.jpg" alt=""></a>
+            </ul>
+        </div>
+
+
+        <div class="TT phan-than">
+            <div>
+                <div class="quang_cao">
+                    <div class="anh_qc">
+                        <div class="so_trang"></div>
+                        <img src="./img-revi/ảnh bìa.jpg" alt="">
+                    </div>
+                    <div class="anh_qc">
+                        <div class="so_trang"></div>
+                        <img src="./img-revi/ảnh bìa 2.png" alt="">
+                    </div>
+                    <div class="anh_qc">
+                        <div class="so_trang"></div>
+                        <img src="./img-revi/ảnh bìa 3.jpg" alt="">
+                    </div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)"><img src="./img-revi/back.png" alt=""></a>
+                <a class="next" onclick="plusSlides(1)"><img src="./img-revi/next.png" alt=""></a>
+            </div>
+            <div class="than_2">
+                <div class="anh_than">
+                    <img src="./img-revi/than_2.jpg" alt="">
+                    <div class="pt_cauchuyen"><a class="pt_chu" href="Revi_2.html">CÂU CHUYỆN RÉVI</a></div>
+                </div>
+            </div>
+            <div class="pt_cuoi">
+                <div class="pt_trai">
+                    <h1 class="pc_quanmoi">QUÁN MỚI</h1>
+                    <ul class="pc_diachi">
+                        <h2>Capital Place</h2>
+                        <li class="pc_diachi_chu">tầng B1, toà Capital Place, Liễu Giai, Ba Đình, Hà Nội</li>
+                    </ul>
+                    <ul class="pc_diachi">
+                        <h2>The West</h2>
+                        <li class="pc_diachi_chu">Tầng 1, toà The West, 265 Cầu Giấy, Dịch Vọng, Hà Nội</li>
+                    </ul>
+                    <ul class="pc_diachi">
+                        <h2>The Hallmark</h2>
+                        <li class="pc_diachi_chu">Tầng 1, toà The Hallmark, 15 Trần Bạch Đằng, Thủ Thiêm, Tp. Hồ Chí Minh</li>
+                    </ul>
+                    <div class="pc_nen">
+                        
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <a class="pc_next" onclick="plusdot(1)"> <img src="./img-revi/Arrow 1.png" alt=""> </a>
+                    </div>
+                </div>
+            <div class="pt_phai">
+                <div class="pc_tren">
+                    <h1 class="tinmoinhat">Tin mới nhất</h1>
+                    <li class="xemchitiet" ><a class="xemchitieta" href="Revi_2.html">xem chi tiết >>></a></li>
+                </div>
+                <div class="pc_noidung">
+                    <div class="pc_nv"><img class="pc_nv_anh" src="./img-revi/nd_1.jpg" alt="">
+                        <li class="pc_nv_chu">món mới, món mới !!!</li>
+                    </div>
+                    <div class="pc_nv"><img class="pc_nv_anh" src="./img-revi/nd_2.jpg" alt="">
+                        <li class="pc_nv_chu">quà tặng, quà tặng !!!</li>
+                    </div>
+                    <div class="pc_nv"><img class="pc_nv_anh" src="./img-revi/nd_3.jpg" alt="">
+                        <li class="pc_nv_chu">món mới, món mới !!!</li>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="TT phan_duoi">
+            <div class="pd_phantren">
+                
+                    <ul class="pd_phantren_ul">
+                        <h1>THÔNG TIN LIÊN HỆ</h1>
+                        <a class="pd_phantren_chu" href="https://www.facebook.com/profile.php?id=100068114271008"><img class="pd_img" src="./img-revi/ic_baseline-facebook.png" alt="facebook"></a>
+                        <a class="pd_phantren_chu" href="https://www.instagram.com/duong_dsh/"><img class="pd_img" src="./img-revi/mdi_instagram.png" alt="instagram"></a>
+                        <a class="pd_phantren_chu" href=""><img class="pd_img" src="./img-revi/mdi_youtube.png" alt="youtube"></a>
+                    </ul>
+                    <div class="pd_form" >
+                        <p class="pd_form_chu">Đăng ký nhận thông báo</p>
+                        <form class="pd_form_dk" action="">
+                            <label for="pd_form_nhap"></label>
+                            <input id="pd_form_nhap" type="email" placeholder="Nhập email của bạn">
+                            <button title="Submit" onclick="kiemtra()" class="pd_form_gui">Đăng  ký nhận tin tức</button>
+                        </form>
+                    </div>
+                
+            </div>
+            <div class="pd_phanduoi">
+                <ul class="pd_phanduoi_ul">
+                    <li class="pd_phanduoi_chu">Révi caffe & teacom.</li>
+                    <li class="pd_phanduoi_chu">Địa chỉ : Tầng B1, tòa Capital Palace, 29 Liễu Giai, Ba Đình, Hà Nội.</li>
+                    <li class="pd_phanduoi_chu">Liên hệ: dsh272004@gmail.com & tuyen19070004@gmail.com.</li>
+                </ul>
+            </div>
+        </div>
+
+        <script>
+            let slideIndex = 1; // Biến đếm slide, bắt đầu từ slide 1
+            showSlides(slideIndex);
+
+            function plusSlides(n) { // Hàm chuyển slide
+              showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) { // Hàm hiển thị slide hiện tại
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) { // Hàm hiển thị slide
+              let i;
+              let slides = document.getElementsByClassName("anh_qc"); // Lấy tất cả các slide
+              if (n > slides.length) {slideIndex = 1}    // Nếu slide vượt quá số lượng slide, quay lại slide đầu tiên
+              if (n < 1) {slideIndex = slides.length} // Nếu slide ít hơn slide đầu tiên, quay lại slide cuối cùng
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  // Ẩn tất cả các slide
+              }
+              slides[slideIndex-1].style.display = "block";  // Hiển thị slide hiện tại
+            }
+
+        </script>
+        <script>
+            let slidedot = 1; // Biến đếm slide, bắt đầu từ slide 1
+            showdot(slidedot);
+            
+            function plusdot(n) { // Hàm chuyển slide
+                showdot(slidedot += n);
+            }
+            
+            function currentSlide(n) { // Hàm hiển thị slide hiện tại
+              showdot(slidedot = n);
+            }
+            
+            function showdot(n) { 
+              let i;
+              let slides = document.getElementsByClassName("pc_diachi"); // Lấy tất cả các slide
+              let dots = document.getElementsByClassName("dot"); // Lấy tất cả các chấm chỉ
+              if (n > slides.length) {slidedot = 1}    // Nếu slide vượt quá số lượng slide, quay lại slide đầu tiên
+              if (n < 1) {slidedot = slides.length} // Nếu slide ít hơn slide đầu tiên, quay lại slide cuối cùng
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  // Ẩn tất cả các slide
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", ""); // Xóa lớp active khỏi tất cả các chấm chỉ
+              }
+              slides[slidedot-1].style.display = "block";  // Hiển thị slide hiện tại
+              dots[slidedot-1].className += " active"; // Thêm lớp active cho chấm chỉ của slide hiện tại
+            }
+            </script>
+        <script>
+            function kiemtra() {
+                var email = document.getElementById('pd_form_nhap').value; 
+                var emailPattern = /^\S+@\S+\.\S+$/;
+                if (!emailPattern.test(email)) {
+                    alert('Email không hợp lệ. Vui lòng nhập lại.');
+                    return;
+                }
+                var thongTin = 'Cảm ơn bạn!\nChúng tôi sẽ gửi thông báo mới nhất đến ' + email;
+                alert(thongTin);
+            }
+        </script>
+    </div>
+</body>
+</html>
