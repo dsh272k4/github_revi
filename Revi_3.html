@@ -229,7 +229,7 @@
         background-color: #000;
         text-align: center;
     }
-        
+    
     </style>
 </head>
 <body>
@@ -256,12 +256,12 @@
                 <h1>Thực đơn của chúng tôi</h1>
             </div>
             <div class="pt_list_menu">
-                <div class="pt_list_menu_con pt_list_all" onclick="plusSlides(1)" ><img class="pt_list_menu_anh" src="./img-revi/all.png" alt="">ALL</div>
-                <div class="pt_list_menu_con" onclick="plusSlides(2)" ><img class="pt_list_menu_anh" src="./img-revi/bánh ngọt.png" alt="">Cà Phê</div>
-                <div class="pt_list_menu_con" onclick="plusSlides(3)" ><img class="pt_list_menu_anh" src="./img-revi/trà chanh.png" alt="">Trà chanh</div>
-                <div class="pt_list_menu_con" onclick="plusSlides(4)" ><img class="pt_list_menu_anh" src="./img-revi/bánh ngọt.png" alt="">Bánh ngọt</div>
+                <div class="pt_list_menu_con all pt_list_all" ><img class="pt_list_menu_anh" src="./img-revi/all.png" alt="">ALL</div>
+                <div class="pt_list_menu_con ca-phe" ><img class="pt_list_menu_anh" src="./img-revi/bánh ngọt.png" alt="">Cà Phê</div>
+                <div class="pt_list_menu_con tra-chanh" ><img class="pt_list_menu_anh" src="./img-revi/trà chanh.png" alt="">Trà chanh</div>
+                <div class="pt_list_menu_con banh-ngot" ><img class="pt_list_menu_anh" src="./img-revi/bánh ngọt.png" alt="">Bánh ngọt</div>
             </div>
-            <div class="pt_khunglist">
+            <div class="pt_khunglist ca-phe">
                 <div class="pt_khung_con">
                     <img class="pt_khung_con_anh" src="./img-revi/cà phê.jpg" alt="">
                     <p class="pt_khung_con_chu">capuchino</p>
@@ -320,7 +320,7 @@
                 </div>
                 
             </div>
-            <div class="pt_khunglist">
+            <div class="pt_khunglist tra-chanh">
                 <div class="pt_khung_con">
                     <img class="pt_khung_con_anh" src="./img-revi/trà 1.jpg" alt="">
                     <p class="pt_khung_con_chu">trà mơ</p>
@@ -341,6 +341,32 @@
                     <img class="pt_khung_con_anh" src="./img-revi/trà 3.jpg" alt="">
                     <p class="pt_khung_con_chu">trà chanh</p>
                     <p class="pt_khung_con_gia">20.000</p>
+                    <div class="pt_khung_con_giohang">
+                        <img src="./img-revi/giỏ hàng.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="pt_khunglist banh-ngot">
+                <div class="pt_khung_con">
+                    <img class="pt_khung_con_anh" src="./img-revi/bánh 1.jpg" alt="">
+                    <p class="pt_khung_con_chu">bánh socolo</p>
+                    <p class="pt_khung_con_gia">30.000</p>
+                    <div class="pt_khung_con_giohang">
+                        <img src="./img-revi/giỏ hàng.png" alt="">
+                    </div>
+                </div>
+                <div class="pt_khung_con">
+                    <img class="pt_khung_con_anh" src="./img-revi/bánh 2.jpg" alt="">
+                    <p class="pt_khung_con_chu">bánh dâu</p>
+                    <p class="pt_khung_con_gia">35.000</p>
+                    <div class="pt_khung_con_giohang">
+                        <img src="./img-revi/giỏ hàng.png" alt="">
+                    </div>
+                </div>
+                <div class="pt_khung_con">
+                    <img class="pt_khung_con_anh" src="./img-revi/bánh 3.jpg" alt="">
+                    <p class="pt_khung_con_chu">bánh kem</p>
+                    <p class="pt_khung_con_gia">30.000</p>
                     <div class="pt_khung_con_giohang">
                         <img src="./img-revi/giỏ hàng.png" alt="">
                     </div>
@@ -389,5 +415,25 @@
                 alert(thongTin);
             }
         </script>
-        </html>
+        <script >
+            document.addEventListener('DOMContentLoaded', function () {
+            const menuItems = document.querySelectorAll('.pt_list_menu_con');
+            const productLists = document.querySelectorAll('.pt_khunglist');
+            document.querySelector('.pt_khunglist.ca-phe').style.display = 'flex';
+            menuItems.forEach(item => {
+                item.addEventListener('click', function () {
+                    const category = this.classList[1]; // Lấy class thứ 2, vì class đầu tiên là 'pt_list_menu_con'
+                    productLists.forEach(list => {
+                        if (category === 'all') {
+                            list.style.display = 'flex';
+                        } else if (list.classList.contains(category)) {
+                            list.style.display = 'flex';
+                        } else {
+                            list.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+        </script>
 </html>
