@@ -320,6 +320,32 @@
                 </div>
                 
             </div>
+            <div class="pt_khunglist">
+                <div class="pt_khung_con">
+                    <img class="pt_khung_con_anh" src="./img-revi/trà 1.jpg" alt="">
+                    <p class="pt_khung_con_chu">trà mơ</p>
+                    <p class="pt_khung_con_gia">30.000</p>
+                    <div class="pt_khung_con_giohang">
+                        <img src="./img-revi/giỏ hàng.png" alt="">
+                    </div>
+                </div>
+                <div class="pt_khung_con">
+                    <img class="pt_khung_con_anh" src="./img-revi/trà 2.jpg" alt="">
+                    <p class="pt_khung_con_chu">trà dâu</p>
+                    <p class="pt_khung_con_gia">35.000</p>
+                    <div class="pt_khung_con_giohang">
+                        <img src="./img-revi/giỏ hàng.png" alt="">
+                    </div>
+                </div>
+                <div class="pt_khung_con">
+                    <img class="pt_khung_con_anh" src="./img-revi/trà 3.jpg" alt="">
+                    <p class="pt_khung_con_chu">trà chanh</p>
+                    <p class="pt_khung_con_gia">20.000</p>
+                    <div class="pt_khung_con_giohang">
+                        <img src="./img-revi/giỏ hàng.png" alt="">
+                    </div>
+                </div>
+            </div>
         </div>
 
 
@@ -363,30 +389,4 @@
                 alert(thongTin);
             }
         </script>
-        <script>
-            let muc = 1; 
-            showSlides(muc);
-
-            function plusSlides(n) { // Hàm chuyển slide
-              showSlides(slideIndex += n);
-            }
-
-            function currentSlide(n) { // Hàm hiển thị slide hiện tại
-              showSlides(slideIndex = n);
-            }
-            
-            function showSlides(n) { // Hàm hiển thị slide
-              let i;
-              let slides = document.getElementsByClassName("anh_qc"); // Lấy tất cả các slide
-              if (n > slides.length) {slideIndex = 1}    // Nếu slide vượt quá số lượng slide, quay lại slide đầu tiên
-              if (n < 1) {slideIndex = slides.length} // Nếu slide ít hơn slide đầu tiên, quay lại slide cuối cùng
-              for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  // Ẩn tất cả các slide
-              }
-              slides[slideIndex-1].style.display = "block";  // Hiển thị slide hiện tại
-            }
-
-        </script>
-    </div>
-</body>
 </html>
