@@ -263,10 +263,11 @@
     .lp_khung_item{
         width: 1010px;
         height: 145px;
-        background-color: rgb(196, 138, 255);
         margin: 35px auto 35px;
         display: flex;
         position: relative;
+        padding-bottom: 40px;
+        border-bottom: 1px solid #333 ;
     }
     .lp_khung_text{
         margin-left: 35px;
@@ -278,10 +279,10 @@
     .lp_khung_thanhtoan{
         position: absolute;
         right: 0;
-        bottom: 0;
+        bottom: 40px;
         width: 300px;
         height: 35px;
-        background-color: #f0e3e3;
+        
         display: flex;
     }
     .lp_khung_thanhtoan  a{
@@ -313,6 +314,29 @@
         margin-top: 0;
         font-size: 30px;
     }
+
+    .lp_khung_tt_xoa img{
+        background-color:var(--mauphu);
+        width: 35px;
+        height: 35px;
+        object-fit: cover;
+    }
+    .lp_khung_tong{
+        cursor: pointer;
+        width: 1010px;
+        height: 70px;
+        background-color: #D84727;
+        font-size: 70px;
+        color: #fff;
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+        margin: 0 auto 40px;
+        user-select: none;
+    }
+    .lop_phu{
+        display: none;
+    }
     </style>
 </head>
 <body>
@@ -329,7 +353,7 @@
                 <li class="pd_phantu"><a class="pd_chu" href="Revi_2.html">Bản Tin</a></li>
                 <li class="pd_phantu pd_chu"></li>
                 <li class="pd_phantu"><a class="pd_chu" href="">Liên Hệ</a></li>
-                <li class="pd_phantu"><a class="pd_chu" href="">Đơn Hàng</a></li>
+                <li class="pd_phantu"><a class="pd_chu" id="don-hang" href="#">Đơn Hàng</a></li>
                 <a class="logo" href="Revi_1.html"><img src="./img-revi/logo.jpg" alt=""></a>
             </ul>
         </div>
@@ -485,7 +509,7 @@
                 </ul>
             </div>
         </div>
-        <div class="lop_phu">
+        <div  class="lop_phu">
             <div class="lp_nen"></div>
             <div class="lp_khung">
                 <div class="lp_khung_item">
@@ -499,10 +523,43 @@
                         <p class="lp_khung_tt_sl">2</p>
                         <a class="lp_khung_tt_them" href="">+</a>
                         <p class="lp_khung_tt_chu">35.000</p>
+                        <a class="lp_khung_tt_xoa" href=""><img src="./img-revi/xóa.png" alt=""></a>
                     </div>
                 </div>
+                <div class="lp_khung_item">
+                    <img src="./img-revi/ca phe 3.jpg" alt="">
+                    <div class="lp_khung_text">
+                        <p class="lp_khung_chu1">Cà phê trứng</p>
+                        <p class="lp_khung_chu2">35.000K</p>
+                    </div>
+                    <div class="lp_khung_thanhtoan">
+                        <a class="lp_khung_tt_bot" href="">-</a>
+                        <p class="lp_khung_tt_sl">2</p>
+                        <a class="lp_khung_tt_them" href="">+</a>
+                        <p class="lp_khung_tt_chu">35.000</p>
+                        <a class="lp_khung_tt_xoa" href=""><img src="./img-revi/xóa.png" alt=""></a>
+                    </div>
+                </div>
+                <div onclick="thanhtoan()" class="lp_khung_tong">Thanh Toán</div>
             </div>
         </div>
+        
+        <script>
+            const donHangBtn = document.getElementById('don-hang');
+            donHangBtn.addEventListener('click', function() {
+            const lopPhu = document.querySelector('.lop_phu');
+            lopPhu.style.display = 'block'; // Hiển thị class 'lop_phu'
+        });
+        </script>
+        <script>
+            function thanhtoan(){
+                var thongtin=' Cảm ơn quý khách đã ủng hộ !!!'
+                alert(thongtin);
+
+                const lopPhu = document.querySelector('.lop_phu');
+                lopPhu.style.display = 'none';
+            }
+        </script>
         <script>
             function kiemtra() {
                 var email = document.getElementById('pd_form_nhap').value; 
