@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Duong_dsh</title>
+    <link rel="stylesheet" href="lop_phu.css">
     <style>
         :root {
             --mauchinh: #53E3DC;
@@ -233,110 +234,6 @@
         user-select: none;
     }
     
-    /* lớp phủ  */
-    .lop_phu{
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        display: flex;
-    }
-    .lp_nen{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0,0,0,0.3);
-    }
-    .lp_khung{
-        width: 1110px ;
-        height: auto;
-        background-color: var(--mauphu);
-        margin:auto 170px ;
-        position: relative;
-    }
-    .lp_khung_item img{
-        width: 145px;
-        height: 145px;
-        object-fit: cover;
-    }
-    .lp_khung_item{
-        width: 1010px;
-        height: 145px;
-        margin: 35px auto 35px;
-        display: flex;
-        position: relative;
-        padding-bottom: 40px;
-        border-bottom: 1px solid #333 ;
-    }
-    .lp_khung_text{
-        margin-left: 35px;
-    }
-    .lp_khung_chu2{
-        font-weight: bold;
-        font-size: 25px;
-    }
-    .lp_khung_thanhtoan{
-        position: absolute;
-        right: 0;
-        bottom: 40px;
-        width: 300px;
-        height: 35px;
-        
-        display: flex;
-    }
-    .lp_khung_thanhtoan  a{
-        text-decoration: none;
-        color: #fff;
-        font-size: 35px;
-        width: 35px;
-        height: 35px;
-        background-color: #D84727;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .lp_khung_tt_sl{
-        width: 35px;
-        height: 35px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 0;
-        font-size: 30px;
-    }
-    .lp_khung_tt_chu{
-        width: 160px;
-        height: 35px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 0;
-        font-size: 30px;
-    }
-
-    .lp_khung_tt_xoa img{
-        background-color:var(--mauphu);
-        width: 35px;
-        height: 35px;
-        object-fit: cover;
-    }
-    .lp_khung_tong{
-        cursor: pointer;
-        width: 1010px;
-        height: 70px;
-        background-color: #D84727;
-        font-size: 70px;
-        color: #fff;
-        display: flex; 
-        justify-content: center; 
-        align-items: center;
-        margin: 0 auto 40px;
-        user-select: none;
-    }
-    .lop_phu{
-        display: none;
-    }
     </style>
 </head>
 <body>
@@ -353,7 +250,7 @@
                 <li class="pd_phantu"><a class="pd_chu" href="Revi_2.html">Bản Tin</a></li>
                 <li class="pd_phantu pd_chu"></li>
                 <li class="pd_phantu"><a class="pd_chu" href="">Liên Hệ</a></li>
-                <li class="pd_phantu"><a class="pd_chu" id="don-hang" href="#">Đơn Hàng</a></li>
+                <li class="pd_phantu" id="don-hang">Đơn Hàng</li>
                 <a class="logo" href="Revi_1.html"><img src="./img-revi/logo.jpg" alt=""></a>
             </ul>
         </div>
@@ -370,8 +267,8 @@
             </div>
             <div class="pt_khunglist ca-phe">
                 <div class="pt_khung_con">
-                    <img class="pt_khung_con_anh" src="./img-revi/cà phê.jpg" alt="">
-                    <p class="pt_khung_con_chu">capuchino</p>
+                    <img class="pt_khung_con_anh" src="./img-revi/ca phe 3.jpg" alt="">
+                    <p class="pt_khung_con_chu">Cà phê trứng</p>
                     <p class="pt_khung_con_gia">35.000</p>
                     <div class="pt_khung_con_giohang">
                         <img src="./img-revi/giỏ hàng.png" alt="">
@@ -518,44 +415,44 @@
                         <p class="lp_khung_chu1">Cà phê trứng</p>
                         <p class="lp_khung_chu2">35.000K</p>
                     </div>
-                    <div class="lp_khung_thanhtoan">
+                    <div class="lp_khung_thanhtoan"data-giadonvi="35000">
                         <a class="lp_khung_tt_bot" href="">-</a>
-                        <p class="lp_khung_tt_sl">2</p>
+                        <p class="lp_khung_tt_sl">1</p>
                         <a class="lp_khung_tt_them" href="">+</a>
                         <p class="lp_khung_tt_chu">35.000</p>
                         <a class="lp_khung_tt_xoa" href=""><img src="./img-revi/xóa.png" alt=""></a>
                     </div>
                 </div>
                 <div class="lp_khung_item">
-                    <img src="./img-revi/ca phe 3.jpg" alt="">
+                    <img src="./img-revi/ca phe 1.jpg" alt="">
                     <div class="lp_khung_text">
-                        <p class="lp_khung_chu1">Cà phê trứng</p>
-                        <p class="lp_khung_chu2">35.000K</p>
+                        <p class="lp_khung_chu1">Americano</p>
+                        <p class="lp_khung_chu2">25.000K</p>
                     </div>
-                    <div class="lp_khung_thanhtoan">
-                        <a class="lp_khung_tt_bot" href="">-</a>
-                        <p class="lp_khung_tt_sl">2</p>
-                        <a class="lp_khung_tt_them" href="">+</a>
-                        <p class="lp_khung_tt_chu">35.000</p>
+                    <div class="lp_khung_thanhtoan" data-giadonvi="25000">
+                        <a class="lp_khung_tt_bot" href="#">-</a>
+                        <p class="lp_khung_tt_sl">1</p>
+                        <a class="lp_khung_tt_them" href="#">+</a>
+                        <p class="lp_khung_tt_chu">25.000</p>
                         <a class="lp_khung_tt_xoa" href=""><img src="./img-revi/xóa.png" alt=""></a>
                     </div>
                 </div>
+                <div class="lp_tong_gia">TỔNG: 0 K</div>
                 <div onclick="thanhtoan()" class="lp_khung_tong">Thanh Toán</div>
             </div>
         </div>
-        
+        <script src="./lop_phu.js"></script>
         <script>
             const donHangBtn = document.getElementById('don-hang');
             donHangBtn.addEventListener('click', function() {
             const lopPhu = document.querySelector('.lop_phu');
-            lopPhu.style.display = 'block'; // Hiển thị class 'lop_phu'
+            lopPhu.style.display = 'block'; 
         });
         </script>
         <script>
             function thanhtoan(){
                 var thongtin=' Cảm ơn quý khách đã ủng hộ !!!'
                 alert(thongtin);
-
                 const lopPhu = document.querySelector('.lop_phu');
                 lopPhu.style.display = 'none';
             }

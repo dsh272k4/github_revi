@@ -1,0 +1,111 @@
+.lop_phu{
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+    }
+    .lp_nen{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.3);
+    }
+    .lp_khung{
+        width: 1110px ;
+        height: 650px;
+        background-color: var(--mauphu);
+        margin:100px 170px ;
+        position: relative;
+    }
+    .lp_khung_item img{
+        width: 145px;
+        height: 145px;
+        object-fit: cover;
+    }
+    .lp_khung_item{
+        width: 1010px;
+        height: 145px;
+        margin: 0 auto 35px;
+        top: 35px;
+        display: flex;
+        position: relative;
+        padding-bottom: 40px;
+        border-bottom: 1px solid #333 ;
+    }
+    .lp_khung_text{
+        margin-left: 35px;
+    }
+    .lp_khung_chu2{
+        font-weight: bold;
+        font-size: 25px;
+    }
+    .lp_khung_thanhtoan{
+        position: absolute;
+        right: 0;
+        bottom: 40px;
+        width: 300px;
+        height: 35px;
+        display: flex;
+    }
+    .lp_khung_thanhtoan  a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 35px;
+        width: 35px;
+        height: 35px;
+        background-color: #D84727;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .lp_khung_tt_sl{
+        width: 35px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+        font-size: 30px;
+    }
+    .lp_khung_tt_chu{
+        width: 160px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+        font-size: 30px;
+    }
+    
+    .lp_khung_tt_xoa img{
+        background-color:var(--mauphu);
+        width: 35px;
+        height: 35px;
+        object-fit: cover;
+    }
+    .lp_khung_tong{
+        cursor: pointer;
+        width: 1010px;
+        height: 70px;
+        background-color: #D84727;
+        font-size: 70px;
+        color: #fff;
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+        user-select: none;
+        position: absolute;
+        bottom: 40px;
+        margin-left: 50px;
+    }
+    .lop_phu{
+        display: none;
+    }
+    .lp_tong_gia{
+        font-size: 35px;
+        position: absolute;
+        right: 50px;
+        bottom: 130px;
+    }
