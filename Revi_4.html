@@ -145,68 +145,90 @@
         
 
         /* phan than */
-        .pt_khung{
-            width: 1110px;
+        .phan_than{
+            background: url(./img-revi/background_4.png) ;
+            width: 1440px;
             height: 700px;
-            margin-top: 100px;
-            border-top: var(--mauchinh) solid 1px;
-            box-sizing: border-box;
-            display: flex;
-            
+            position: relative;
         }
-        .pt_khung_anh{
-            width: 675px;
-            height: 700px;
-            display: flex;
-            justify-content: space-between;
-        }
-        .pt_anh{
-            margin-top: 100px;
-            width: 215px;
-            height: 450px;
-            border-radius: 20px;
-            object-fit: cover;
-        }
-        .pt_anh_2{
-            margin-top: 150px;
-        }
-        .pt_khung_giothieu{
-            width: 435px;
-            height: 700px;
-            padding: 100px 40px 0;
+        .pt_phai{
+            position: absolute;
+            width: 550px;
+            height: 550px;
+            background-color: rgba(83, 227, 220, 0.7);
+            top: 75px;
+            right: 75px;
+            border-radius: 10px;
+            padding: 50px;
             box-sizing: border-box;
         }
-        .pt_khung_tieude{
-           width: 100%;
-           height: 100px;
-           font-size: 45px;
-           box-sizing: border-box;
+        .pt_phai h1{
+            font-size: 50px;
+            color: #fff;
         }
-        .pt_khung_noidung{
-            width: 100%;
-            height: 200px;
-            font-size: 18px;
-            
+        .pt_phai h2{
+            font-size: 30px;
         }
-        .pt_khung_button{
-            width: 120px;
-            height: 40px;
-            background-color: #fff;
-            border: #18A0FB 1px solid;
-            border-radius: 5px;
+        .pt_phai div{
+            width: 450px;
+            height: 60px;
+            margin-top: 10px;
+            font-size: 20px;
             display: flex;
-            align-items: center; 
-            justify-content: center;
+            align-items: center;
         }
-        .pt_khung_button_chu{
-            text-decoration: none;
-            color: #18A0FB;
-            font-size: 18px;
+        .pt_phai div img{
+            width: 36px;
+            height: 36px;
+            margin-right: 10px;
         }
-        .pt_khung_button:hover{
-            background-color: var(--mauchinh);
+        .pt_trai{
+            width:835px ;
         }
-        
+        .pt_trai h1{
+            font-size: 50px;
+            color: #fff;
+            padding:90px 0 0 40px;
+        }
+        .pt_trai input{
+            width: 350px;
+            height: 70px;
+            background-color: #000;
+            border-radius: 21px 0 21px 0 ;
+            border: var(--mauchinh) 5px solid;
+            margin:30px 0  0 40px;
+            font-size: 20px;
+            color: var(--mauchinh);
+            padding-left: 50px;
+            box-sizing: border-box;
+        }
+         .pt_trai input::placeholder{
+            color: var(--mauchinh);
+
+         }
+        .pt_trai div{
+            position: relative;
+        }
+        .pt_trai div img{
+            position: absolute;
+            top: 50%; 
+            left: 50px;
+        }
+        .pt_trai form{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .pt_trai form button{
+            width: 250px;
+            height: 70px;
+            color: #fff;
+            background-color: #EE2737;
+            position: absolute;
+            bottom: 70px;
+            left: 300px;
+            border-radius: 21px 0 21px 0 ;
+            border: none;
+        }
     </style>
 </head>
 <body>
@@ -229,49 +251,44 @@
         </div>
 
 
-        <div class="TT phan-than">
-            <div class="pt_khung">
-                <div class="pt_khung_anh">
-                    <img class="pt_anh" src="./img-revi/ca phe 1.jpg" alt="">
-                    <img class="pt_anh pt_anh_2 " src="./img-revi/ca phe 2.jpg" alt="">
-                    <img class="pt_anh" src="./img-revi/ca phe 3.jpg" alt="">
-                </div>
-                <div class="pt_khung_giothieu">
-                    <h1 class="pt_khung_tieude">Giới thiệu đôi nét về caffe</h1>
-                    <p class="pt_khung_noidung">Một ngày làm việc lại bắt đầu. Révi cũng bắt đầu guồng quay ngày mới để mang đến năng lượng tỉnh táo và sự sáng tạo, đột phá tới các bạn.Đừng quên, Révi phục vụ bạn suốt ngày dài công sở. Ghé Révi bất cứ lúc nào bạn muốn, hoặc liên hệ chúng mình để order nhé.<br> Chúc bạn yêu ngày mới nhiều niềm vui!</p>
-                    <div class="pt_khung_button">
-                        <a class="pt_khung_button_chu" href="">Tìm hiểu thêm</a>
+        <div class="tt phan_than">
+            <div class="pt_trai">
+                <h1>Book a Table</h1>
+                <form onsubmit="dattruoc(event)" action="">
+                    <div>
+                        <input class="pt_form_name" type="text" placeholder="Your Name">
+                        <img src="./img-revi/name.png" alt="">
                     </div>
-                </div>
+                    <div>
+                        <input class="pt_form_sdt" type="number" placeholder="Phone Number">
+                        <img src="./img-revi/sdt.png" alt="">
+                    </div>
+                    <div>
+                        <input class="pt_form_sl" type="number" placeholder="Number of People">
+                        <img src="./img-revi/soluong.png" alt="">
+                    </div>
+                    <div>
+                        <input class="pt_form_email" type="email" placeholder="Your Email">
+                        <img src="./img-revi/thu.png" alt="">
+                    </div>
+                    <div>
+                        <input class="pt_form_time" type="time" >
+                        <img src="./img-revi/time.png" alt="">
+                    </div>
+                    <div>
+                        <input class="pt_form_date" type="date" >
+                        <img src="./img-revi/date.png" alt="">
+                    </div>    
+                    <button title="Submit" onclick="dattruoc()" class="pt_form_gui">Book a Table</button>
+                </form>
             </div>
-            <div class="pt_khung">
-                <div class="pt_khung_anh">
-                    <img class="pt_anh" src="./img-revi/trà 1.jpg" alt="">
-                    <img class="pt_anh pt_anh_2 " src="./img-revi/trà 2.jpg" alt="">
-                    <img class="pt_anh" src="./img-revi/trà 3.jpg" alt="">
-                </div>
-                <div class="pt_khung_giothieu">
-                    <h1 class="pt_khung_tieude">Giới thiệu đôi nét về caffe</h1>
-                    <p class="pt_khung_noidung">Một ngày làm việc lại bắt đầu. Révi cũng bắt đầu guồng quay ngày mới để mang đến năng lượng tỉnh táo và sự sáng tạo, đột phá tới các bạn.Đừng quên, Révi phục vụ bạn suốt ngày dài công sở. Ghé Révi bất cứ lúc nào bạn muốn, hoặc liên hệ chúng mình để order nhé.<br> Chúc bạn yêu ngày mới nhiều niềm vui!</p>
-                    <div class="pt_khung_button">
-                        <a class="pt_khung_button_chu" href="">Tìm hiểu thêm</a>
-                    </div>
-                </div>
+            <div class="pt_phai">
+                <h1>Thông tin liên lạc</h3>
+                <h2>Cảm ơn đã đặt trước !!!</h4>
+                <div class="pt_phai_thongtin"><img src="./img-revi/diachi.png" alt="">Tầng B1, tòa Capital Palace, 29 Liễu Giai, Ba Đình, Hà Nội.</div>
+                <div class="pt_phai_thongtin"><img src="./img-revi/tel.png" alt="">0983077673</div>
+                <div class="pt_phai_thongtin"><img src="./img-revi/gmail.png" alt="">dsh272004@gmail.com</div>
             </div>
-            <div class="pt_khung">
-                <div class="pt_khung_anh">
-                    <img class="pt_anh" src="./img-revi/bánh 1.jpg" alt="">
-                    <img class="pt_anh pt_anh_2 " src="./img-revi/bánh 2.jpg" alt="">
-                    <img class="pt_anh" src="./img-revi/bánh 3.jpg" alt="">
-                </div>
-                <div class="pt_khung_giothieu">
-                    <h1 class="pt_khung_tieude">Giới thiệu đôi nét về caffe</h1>
-                    <p class="pt_khung_noidung">Một ngày làm việc lại bắt đầu. Révi cũng bắt đầu guồng quay ngày mới để mang đến năng lượng tỉnh táo và sự sáng tạo, đột phá tới các bạn.Đừng quên, Révi phục vụ bạn suốt ngày dài công sở. Ghé Révi bất cứ lúc nào bạn muốn, hoặc liên hệ chúng mình để order nhé.<br> Chúc bạn yêu ngày mới nhiều niềm vui!</p>
-                    <div class="pt_khung_button">
-                        <a class="pt_khung_button_chu" href="">Tìm hiểu thêm</a>
-                    </div>
-                </div>
-            </div>    
         </div>
 
 
@@ -302,7 +319,58 @@
                 </ul>
             </div>
         </div>
+        <script>
+            function dattruoc(event) {
+                event.preventDefault();
 
+                var name = document.querySelector('.pt_form_name').value; 
+                var sdt = document.querySelector('.pt_form_sdt').value; 
+                var sl = document.querySelector('.pt_form_sl').value; 
+                var email = document.querySelector('.pt_form_email').value; 
+                var time = document.querySelector('.pt_form_time').value; 
+                var date = document.querySelector('.pt_form_date').value; 
+                
+                var setname = /^[a-zA-ZÀ-ỹ\s]+$/;
+                if (!setname.test(name)) {
+                    alert('ten không hợp lệ. Vui lòng nhập lại.');
+                    return;
+                }
+                var setsdt = /^[0-9]{10}$/;
+                if (!setsdt.test(sdt)) {
+                    alert('sdt không hợp lệ. Vui lòng nhập lại.');
+                    return;
+                }
+                var setsl = /^[0-9]+$/ ;
+                if (!setsl.test(sl)) {
+                    alert('so luong không hợp lệ. Vui lòng nhập lại.');
+                    return;
+                }
+                var setemail =  /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!setemail.test(email)) {
+                    alert('email không hợp lệ. Vui lòng nhập lại.');
+                    return;
+                }
+                var settime = /^([01]\d|2[0-3]):([0-5]\d)$/;
+                if (!settime.test(time)) {
+                    alert('time không hợp lệ. Vui lòng nhập lại.');
+                    return;
+                }
+                var setdate = /^\d{4}-\d{2}-\d{2}$/ ;
+                if (!setdate.test(date)) {
+                    alert('date không hợp lệ. Vui lòng nhập lại.');
+                    return;
+                }
+
+                var thongTin = 'Họ và tên: ' + name + '\n' +
+                    'số điện thoại: ' + sdt + '\n' +
+                    'số lượng: ' + sl + '\n' +
+                    'email: ' + email + '\n' +
+                    'giờ: ' + time + '\n' +
+                    'ngày: ' + date + '\n' +
+                    'cảm ơn quý khách đã ủng hộ !!!'
+                alert(thongTin);
+            }
+        </script>
         <script>
             function kiemtra() {
                 var email = document.getElementById('pd_form_nhap').value; 
@@ -314,6 +382,9 @@
                 var thongTin = 'Cảm ơn bạn!\nChúng tôi sẽ gửi thông báo mới nhất đến ' + email;
                 alert(thongTin);
             }
+        </script>
+        <script>
+            
         </script>
     </div>
 </body>
